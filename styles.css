@@ -1,0 +1,381 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    background-image: url('background-loop.jpg'); /* Imagem de fundo em loop */
+    background-size: cover;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #0099ff, #66ccff);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s ease-in;
+}
+
+header .logo {
+    margin-bottom: 20px;
+}
+
+header .logo img {
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffdd00;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Seções */
+section {
+    padding: 60px 20px;
+    position: relative;
+    animation: fadeIn 1s ease-in;
+    background: #fff; /* Cor de fundo inicial */
+    transition: background 1s ease-in-out; /* Transição suave entre cores */
+    text-align: center; /* Centraliza o conteúdo das seções */
+}
+
+section:nth-child(even) {
+    background: linear-gradient(to bottom, #e6f7ff, #ccf2ff);
+}
+
+section:nth-child(odd) {
+    background: linear-gradient(to bottom, #ccf2ff, #e6f7ff);
+}
+
+section .container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Sobre */
+.about-images {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    flex-direction: column; /* Centraliza as imagens na seção de sobre */
+}
+
+.about-image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    animation: fadeInOut 6s infinite;
+    object-fit: contain;
+}
+
+/* Seção de Serviços */
+#services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, opacity 0.3s;
+    opacity: 0.8;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    opacity: 1;
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #003366;
+    text-align: center; /* Centraliza o título dos serviços */
+}
+
+.service p {
+    color: #666;
+    text-align: center; /* Centraliza o texto dos serviços */
+}
+
+/* Importância da Reciclagem */
+#importance {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#importance h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+#importance p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.importance-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.detail {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    opacity: 0.8;
+}
+
+.detail:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    opacity: 1;
+}
+
+.detail h3 {
+    margin-top: 0;
+    color: #003366;
+    text-align: center; /* Centraliza o título dos detalhes */
+}
+
+.detail p {
+    color: #666;
+    text-align: center; /* Centraliza o texto dos detalhes */
+}
+
+/* Contato */
+#contact ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contact ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #003366;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+    text-align: center; /* Centraliza o botão de WhatsApp */
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe56;
+}
+
+.social-media {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 2em;
+    margin: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #003366;
+    transform: scale(1.1);
+}
+
+/* Adicionalmente, garanta que não haja linhas ou espaços indesejados */
+.social-icon i {
+    display: block;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Alterna o início da animação para cada imagem */
+.image1 {
+    animation-delay: 0s;
+}
+
+.image2 {
+    animation-delay: 3s;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .service h3 {
+        font-size: 1.3em;
+    }
+
+    .service p {
+        font-size: 1em;
+    }
+
+    .importance-details {
+        flex-direction: column;
+        align-items: center; /* Centraliza os detalhes da importância */
+    }
+
+    .detail {
+        flex: 1 1 100%;
+        text-align: center; /* Centraliza o conteúdo dos detalhes */
+    }
+
+    /* Centralizar conteúdo no layout mobile */
+    .about-images, 
+    .services-wrapper,
+    .importance-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
